@@ -1,2 +1,2 @@
-# MEAN-Test
+# README.md
 Simple spreadsheet web app
