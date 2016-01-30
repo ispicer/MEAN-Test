@@ -11,12 +11,15 @@
 	<body ng-app = 'spreadsheet'>
 		<div id='main' class='container' ng-controller='mainController'>
 			<div class = 'topRow'>
-				<button type='button' class='btn btn-primary' ng-click='addRow()'>Add row</button>
-				<button type='button' class='btn btn-primary' ng-click='addColumn()'>Add column</button>
+				<button type='button' class='btn btn-primary' ng-click='addRow()'>Add Row</button>
+				<button type='button' class='btn btn-primary' ng-click='addColumn()'>Add Column</button>
+				<button type='button' class='btn btn-danger' ng-click='deleteRow()'>Delete Row</button>
+				<button type='button' class='btn btn-danger' ng-click='deleteColumn()'>Delete Column</button>
 			</div>
-			<div class='rows' ng-repeat='row in rows'>
-				<input class='data' ng-repeat='data in row track by $index'></input>
-			</div>
+			<div class='spreadsheet'>
+				<div class='rows' ng-repeat='row in rows'>
+					<input class='data' ng-repeat='data in row track by $index'></input>
+				</div>
 			</div>
 		</div>
 	</body>
