@@ -1,4 +1,10 @@
 var mongoose = require("mongoose");
-var dataSchema = new mongoose.Schema ({
-	data: String 
+var Schema = mongoose.Schema;
+
+var dataSchema = new mongoose.Schema({
+	rowNumber: Number,
+	colNumber: Number,
+	data: String
 });
+
+mongoose.model('Data', dataSchema);
